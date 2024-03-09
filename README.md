@@ -2,4 +2,4 @@
 
 https://github.com/pete3n/nixvim-flake
 
-Thanks to pete3n for making this.
+Thanks to pete3n for making this template.
