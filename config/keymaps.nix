@@ -60,15 +60,15 @@
         desc = "Shift line up 1 in visual mode";
       };
     }
-    {
-      key = "J";
-      mode = "n";
-      action = "mzJ\`z"; # Keep cursor to the left
-      options = {
-        silent = true;
-        noremap = true;
-      };
-    }
+    # {
+    #   key = "J";
+    #   mode = "n";
+    #   action = "mzJ\`z"; # Keep cursor to the left
+    #   options = {
+    #     silent = true;
+    #     noremap = true;
+    #   };
+    # }
     {
       key = "<C-d>";
       mode = "n";

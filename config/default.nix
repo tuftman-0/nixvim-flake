@@ -1,4 +1,8 @@
-{pkgs, lib, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   imports = [
     ./keymaps.nix
     ./style.nix
@@ -17,14 +21,18 @@
     globals = {
       mapleader = " ";
     };
+    extraConfigLua = ''
+      vim.cmd [[ autocmd FileType nix setlocal commentstring=#\ %s ]]
+    '';
 
     options = {
       number = true;
+      cursorline = true;
       colorcolumn = "80";
       relativenumber = true;
       shiftwidth = 2;
       tabstop = 2;
-      wrap = false;
+      wrap = true;
       swapfile = false; #Undotree
       backup = false; #Undotree
       undofile = true;
@@ -38,6 +46,9 @@
     };
 
     plugins = {
+      commentary.enable = true;
+      surround.enable = true; # try to switch with other plugin
+      # vim-unimpaired.enable = true;
       gitsigns.enable = true;
       oil.enable = true;
       undotree.enable = true;
@@ -86,12 +97,12 @@
       llvmPackages_17.bintools-unwrapped
       marksman
 
-    (nerdfonts.override {
-      fonts = [
-        "JetBrainsMono"
-        "RobotoMono"
-      ];
-    })
+      (nerdfonts.override {
+        fonts = [
+          "JetBrainsMono"
+          "RobotoMono"
+        ];
+      })
 
       python3
       ripgrep

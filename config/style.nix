@@ -5,7 +5,7 @@
     transparent = true;
   };
   plugins = {
-    notify.enable = true;
+    notify.enable = false;
     lualine = {
       enable = true;
       iconsEnabled = false;
@@ -13,12 +13,13 @@
       theme = "onedark";
     };
     noice = {
-      enable = true;
+      enable = false;
       presets = {
         bottom_search = true;
       };
       cmdline.format = {
-        cmdline = {icon = ">";};
+        # cmdline = {icon = ">";};
+        # cmdline = {icon = ":";};
         search_down = {icon = "🔍⌄";};
         search_up = {icon = "🔍⌃";};
         filter = {icon = "$";};
@@ -42,16 +43,16 @@
       };
     };
   };
-  extraConfigLua = ''
-    -- Noice recommended config
-    require("noice").setup({
-    lsp = {
-    	override = {
-    		["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-    		["vim.lsp.util.stylize_markdown"] = true,
-    		["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
-    	},
-    },
-    })
-  '';
+  # extraConfigLua = ''
+  #   -- Noice recommended config
+  #   require("noice").setup({
+  #   lsp = {
+  #   	override = {
+  #   		["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+  #   		["vim.lsp.util.stylize_markdown"] = true,
+  #   		["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
+  #   	},
+  #   },
+  #   })
+  # '';
 }
