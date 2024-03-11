@@ -20,11 +20,13 @@
       tsserver.enable = true;
       yamlls.enable = true;
       zls.enable = true;
+      # hls.enable = true;
     };
   };
   extraPlugins = with pkgs.vimPlugins; [
     nvim-lspconfig
     typescript-tools-nvim
+    haskell-tools-nvim
   ];
   extraConfigLua = ''
       -- Extra nvim-lspconfig configuration
@@ -283,5 +285,6 @@
       		set_cmn_lsp_keybinds()
       	end,
       })
+
   '';
 }

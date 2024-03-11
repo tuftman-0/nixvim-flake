@@ -109,6 +109,11 @@
       rr
       tmux-sessionizer
       zig
+      ghc
+      cabal2nix
+      haskell-language-server
+      cabal-install
+      hlint
     ];
   };
 }
