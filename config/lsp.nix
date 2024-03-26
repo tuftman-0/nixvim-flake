@@ -1,4 +1,7 @@
 {pkgs, ...}: {
+  # plugins.haskell-tools-nvim = {
+  #   enable = true;
+  # };
   plugins.lsp = {
     servers = {
       bashls.enable = true;
@@ -20,7 +23,7 @@
       tsserver.enable = true;
       yamlls.enable = true;
       zls.enable = true;
-      # hls.enable = true;
+      hls.enable = true;
     };
   };
   extraPlugins = with pkgs.vimPlugins; [

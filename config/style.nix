@@ -13,12 +13,12 @@
       theme = "onedark";
     };
     noice = {
-      enable = false;
+      enable = true;
       presets = {
         bottom_search = true;
       };
       cmdline.format = {
-        # cmdline = {icon = ">";};
+        cmdline = {icon = ">";};
         # cmdline = {icon = ":";};
         search_down = {icon = "🔍⌄";};
         search_up = {icon = "🔍⌃";};
